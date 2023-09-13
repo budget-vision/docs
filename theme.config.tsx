@@ -1,18 +1,28 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from 'react';
+import { DocsThemeConfig } from 'nextra-theme-docs';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: (
+    <p className="hidden items-center space-x-2 md:flex">
+      <Image width={32} height={32} alt="logo" src="/img/logo.png" className={'rounded-full'} />
+      <span className="hidden font-bold sm:inline-block">Budget Vision</span>
+    </p>
+  ),
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://www.budget.vision/landing',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/6E8Bu8GMAE',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/budget-vision/docs/tree/main',
+  feedback: {
+    useLink: () => 'https://discord.gg/6E8Bu8GMAE',
+  },
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Budget Vision Docs',
   },
-}
+};
 
-export default config
+export default config;
