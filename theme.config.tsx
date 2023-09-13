@@ -10,6 +10,11 @@ const config: DocsThemeConfig = {
       <span className="hidden font-bold sm:inline-block">Budget Vision</span>
     </p>
   ),
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s - Budget Vision Docs',
+    };
+  },
   project: {
     link: 'https://www.budget.vision/landing',
   },
