@@ -1,17 +1,27 @@
 {
-  "index": "Introduction",
+  "index": "What is Budget Vision?",
   "getting-started": { "title": "Getting started" },
-  "faq": "FAQ",
-  "blog": "Blog",
-  "cases": "Cases",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "how-to-deal-with": "Guides",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/budget_vision",
+    "href": "mailto:dmitrii@malakhov.one?subject=Budget Vision feedback",
     "newWindow": true
+  },
+  "faq": "FAQ",
+
+  "Join our community": {
+    "title": "Join our community ↗",
+    "href": "https://discord.gg/6E8Bu8GMAE",
+    "newWindow": true
+  },
+  "Request a feature": {
+    "title": "Request a feature ↗",
+    "href": "https://budget-vision.canny.io/feature-requests",
+    "newWindow": true
+  },
+  "Report a bug": {
+    "title": "Report a bug ↗",
+    "href": "mailto:dmitrii@malakhov.one?subject=Budget Vision Bug Report"
   }
 }

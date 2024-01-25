@@ -1,13 +1,62 @@
-# **Budget Vision: Your Financial Future, Visualized**
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/carousel";
+import { Card, CardContent } from "../components/card";
+import { Callout } from "nextra/components";
 
-Budget Vision is more than just another budgeting tool—it's a revolutionary approach to personal finance. Our platform allows users to view their transactions as calendar events, offering a unique perspective on daily balances and future projections.
+# **What is Budget Vision?**
+
+Budget Vision helps you to plan your budget and lets you see transactions in a calendar with daily balance per account/currency or total in one currency.
+
+Focuses on future planning, highlighting possible cash shortages instead of past and tracking expenses.
+
+<Callout>
+  The main strength of Budget Vision is that it allows to plan with **high level
+  of uncertainty**.
+
+...And get prepared in advance.
+
+</Callout>
 
 ## Features
 
-- **Proactive Approach**: While traditional apps offer a rearview mirror to your spending, Budget Vision illuminates your today and guides your tomorrows. Forecast with confidence.
-- **Daily Balance Insights**: At a glance, understand your daily financial standing. Know when you're on track and when to adjust your spending habits.
-- **Real-time Overspending Alerts**: Stay informed, not surprised. Budget Vision notifies you when daily expenses exceed your set budget, ensuring you’re always in the loop.
-- **Reality Alignment**: Update your actual account balance at any time to ensure your budgeting remains rooted in real-world figures.
-- **Multi-currency Support**: Whether you're a globetrotter or dealing with overseas transactions, Budget Vision seamlessly integrates multiple currencies to keep you updated without the fuss.
-- **Future Planning**: Dreaming of a vacation or considering a new home? Understand when you can realistically achieve these financial goals with our intuitive projections.
-- **And More**: With features on the horizon such as reminders and Google Calendar integration, Budget Vision continues to evolve, promising users an even more comprehensive budgeting experience.
+- **Focus on future**: View expected balance for each day in the future, see when you can afford to buy something or when you need to save more.
+- **Multi-currency**: See balance in each currency, or total sum in one currency of your choice.
+- **Expenses tracking**: See all your expenses in a calendar, filter by account, category, or tag.
+- **AI Powered**: Just write "_Coffee 3.5 past monday_", "_groceries 20eur_", or "_rent 1k on 5th_" and it will create a transaction for you.
+- **But it's not an expense tracker**: It's not meant to track every single expense, but rather to help you plan your budget and see how much you can spend.
+
+<Carousel
+  className="w-full mt-8"
+  opts={{
+    loop: true,
+    align: "start",
+  }}
+>
+  <CarouselContent>
+    {Array.from({ length: 5 }).map((_, index) => (
+      <CarouselItem key={index} className="basis-1/3">
+        <Card>
+          <CardContent className="flex items-center rounded-md overflow-hidden justify-center p-0">
+            <img
+              src={`/canva/${index + 1}.png`}
+              className="w-full h-full rounded-xl"
+            />
+          </CardContent>
+        </Card>
+      </CarouselItem>
+    ))}
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>
+
+## Read next
+
+- [Getting Started](/getting-started)
+- [Savings](/how-to-deal-with/savings)
+- [Goals and wishlists](/how-to-deal-with/goals)

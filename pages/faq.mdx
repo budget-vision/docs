@@ -1,3 +1,74 @@
-# FAQ
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/accordion";
 
-This is the index page for the Advanced folder!
+# Frequently Asked Questions
+
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it free?</AccordionTrigger>
+    <AccordionContent>
+      While it's not free, we do offer a free trial. You can try it out for 30
+      days, no credit card required. You can even export your data if you decide
+      to, or request a to have your data deleted.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Is there mobile app?</AccordionTrigger>
+    <AccordionContent>
+      At this time, there is no mobile app. However, the web app is mobile
+        friendly and works well on mobile devices.
+
+        There are two main reasons for not having a mobile app:
+
+        1. I don't know how to fit core information (daily balances) on a small screen well enough. I don't
+        want to have to hide information behind tabs or buttons. I want to see
+        everything at a glance.
+
+        2. If I start with a mobile app, I'll have to support multiple platforms at once, which will slow down development drastically, and some features may not be available on all platforms at the same time.
+
+        I want to focus on
+        making the web app the best it can be, and don't want to spread myself
+        too thin by trying to support multiple platforms.
+    </AccordionContent>
+
+</AccordionItem>
+
+  <AccordionItem value="item-3">
+    <AccordionTrigger>Can I export all my data?</AccordionTrigger>
+    <AccordionContent>
+        Yes, you can export all your data at any time. You can also request to
+        have your data deleted.
+
+        To export your data, go to Settings > Export Data.
+        If you have other questions, please contact us at
+        <a href="mailto:dmitrii@malakhov.one?subject=Budget%20Vision%20Question"
+        className="underline text-blue-500 hover:text-blue-700"
+        target="_blank" rel="noopener noreferrer"
+        >email</a>.
+    </AccordionContent>
+    </AccordionItem>
+
+  <AccordionItem value="item-4">
+    <AccordionTrigger>Sync transactions with bank?</AccordionTrigger>
+    <AccordionContent>
+        Nope, this is not a feature at this time. I'm considering adding it in the future, when the user base grows enough to cover integration costs.
+
+        But you can import transactions from your bank. You can import QFX, QBO, OFX, and CSV files. You can also import transactions from other apps, such as Mint, YNAB, and others.
+
+        This is a manual process yet, but it'll be automated in the future.
+
+        To request import, just send me an
+        <a href="mailto:dmitrii@malakhov?subject=Budget%20Vision%20Data Import" className="underline text-blue-500 hover:text-blue-700" target="_blank" rel="noopener noreferrer">email</a>
+        with the file attached, and I'll import it for you.
+    </AccordionContent>
+    </AccordionItem>
+
+</Accordion>
+
+## Contact Us
+
+If you have other questions, please contact us at [email](mailto:dmitrii@malakhov?subject=Budget%20Vision%20Question).
