@@ -4,15 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const config: DocsThemeConfig = {
-  head: (
-    <>
-      <script
-        defer
-        data-domain="docs.budget.vision"
-        src="https://plausible.io/js/script.js"
-      ></script>
-    </>
-  ),
   logo: (
     <p className="hidden items-center space-x-2 md:flex">
       <Image
