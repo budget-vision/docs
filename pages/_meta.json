@@ -1,15 +1,12 @@
 {
   "index": "What is Budget Vision?",
   "getting-started": { "title": "Getting started" },
+  "tutorials": { "title": "Tutorials", "display": "hidden" },
   "how-to-deal-with": "Guides",
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "mailto:dmitrii@malakhov.one?subject=Budget Vision feedback",
-    "newWindow": true
-  },
   "faq": "FAQ",
-
+  "---": {
+    "type": "separator"
+  },
   "Join our community": {
     "title": "Join our community ↗",
     "href": "https://discord.gg/6E8Bu8GMAE",
