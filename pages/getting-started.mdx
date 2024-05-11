@@ -1,6 +1,70 @@
-import { Steps } from "nextra/components";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/accordion";
 
-# How to get started
+import { Steps } from "nextra/components";
+import { Bleed } from "nextra-theme-docs";
+import { Callout } from "nextra/components";
+
+# Guide on how to plan and save the budget with Budget Vision
+
+{" "}
+
+<Bleed>
+  <img
+    src="/img/hero.png"
+    alt="Start with regular monthly income & expenses (salary 🤑, rent 🏠, credits 🏦, bills 🧾, etc.)"
+    className="w-full"
+  />
+</Bleed>
+
+## In this guide:
+
+- 🤔 [What is a Budget Vision?](#what-is-a-budget-vision)
+- 🚀 [How to get started](#how-to-get-started)
+- 🏦 [Accounts Setup](#set-actual-balance-for-all-accounts)
+- 💸 [Add Transactions](#add-transactions)
+- 📅 [Plan ahead](#plan-ahead)
+- 📝 [Step by step guide](#setup)
+- 📊 [Actual planning](#actual-planning)
+- 😊 [Example 1 (easy)](#example-1-easy)
+- 😄 [Example 2 (still easy)](#example-2-still-easy)
+- 🤓 [Example 3 (plan things)](#example-3-plan-things)
+- 😅 [Example 4 (overspending)](#example-4-overspending)
+- 🎯 [How to follow the budget with corrections](#how-to-follow-the-budget-with-corrections)
+- ❓ [Frequent questions](#frequent-questions)
+
+## What is a Budget Vision?
+
+_A calendar you've always had in your head._ The personal budgeting app, aimed to help you find answers:
+
+- 💰 how much am I going to have next Monday?
+- 🌍 I have X bucks, Y euros, Z Thai bath, and a bit of coins, how much is it in total??
+- 🤔 when is it a good time to buy \<tickets\/gadget\/etc\>? Can I do it now or better wait for a week?
+
+⏳and more.
+
+<Callout>
+  Unlike **expense tracking** apps, this one is aimed mostly at **future**,
+  giving you an option to juggle your planned expenses to **find the best time**
+  to use your money.
+</Callout>
+
+## How to get started
+
+<Callout type="info" >
+<p className="text-xl font-bold">TL;DR:</p>
+1. Update the balance (use the Right-click -> "Create correction" button on any day)
+2. Add regular transactions (salary, rent, bills, groceries, etc.)
+3. Add future one-time transactions (vacation, doctor, etc.)
+4. Log your past transactions
+
+Check in and repeat in a week (or bi-weekly, or monthly, whatever you want)
+
+  </Callout>
 
 <Steps>
 #### Log in and set accounts
@@ -10,12 +74,27 @@ Adjust currencies, add more accounts for savings or other if needed.
 
 <img src="/img/reconcile.png" className="img" />
 Start here, set actual balance for all accounts, so you can see how much you can
-spend.
+spend. You'll be prompted to update the balance on login, and you can do it manually
+as well.
 
 ### Add transactions
 
+{" "}
+
+<img src="/img/add-transactions.png" alt="Add transaction" className="img" />
+
 Go for regular expenses and incomes first, like payroll, rent, bills, groceries, etc. Add them as
 recurring transactions, so you don't have to add them every time.
+
+#### Use Telegram Bot for easy AI-powered transactions
+
+Go to [Settings -> Telegram Bot](https://www.budget.vision/settings/ai-input), set it up, and just write the transaction in Telegram.
+
+Examples:
+
+- "100$ bill last Thu"
+- "80 groceries" _(will be recorded as 80 eur (if default account is in EUR) today)_
+- "5+2 coffee yesterday" _(will be recorded as 7 eur for coffee yesterday)_
 
 ### Plan ahead
 
@@ -152,3 +231,79 @@ Oh, God, I totally forgot about that yearly subscription to my Apple account. �
 />
 
 Ok, it's still possible to go out with the friend next week. Glad that I can see this beforehand.
+
+## How to follow the budget with corrections
+
+Each time you login, you'll be prompted to update the balance for today. You can also do it manually anyyime.
+
+The more often you update the balance, the more accurately you'll be able to see coming shortcomings in your budget (hopefully none).
+
+<Callout>
+  After the balance is set, new transactions added before the correction **will
+  update the correction amount automatically**.
+</Callout>
+
+## Frequent questions
+
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it free?</AccordionTrigger>
+    <AccordionContent>
+      While it's not free, we do offer a free trial. You can try it out for 7
+      days, no credit card required. You can even export your data if you decide
+      to, or request to have your data deleted.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Is there mobile app?</AccordionTrigger>
+    <AccordionContent>
+      At this time, there is no mobile app. However, the web app is mobile
+        friendly and works well on mobile devices.
+
+        There are two main reasons for not having a mobile app:
+
+        Since the app is focused not on expense tracking with quick and easy access, but for planning and saving the budget, it competes better with Excel or tools like that.
+
+I don't know how to fit core information (daily balances) on a small screen well enough. I don't
+want to have to hide information behind many tabs or buttons. I want to see
+everything at a glance.
+
+    </AccordionContent>
+
+</AccordionItem>
+
+  <AccordionItem value="item-3">
+    <AccordionTrigger>Can I export all my data?</AccordionTrigger>
+    <AccordionContent>
+        Yes, you can export all your data at any time. You can also request to
+        have your data deleted.
+
+        To export your data, go to Settings > Export Data.
+        If you have other questions, please contact us at
+        <a href="mailto:dmitrii@malakhov.one?subject=Budget%20Vision%20Question"
+        className="underline text-blue-500 hover:text-blue-700"
+        target="_blank" rel="noopener noreferrer"
+        >email</a>.
+    </AccordionContent>
+    </AccordionItem>
+
+  <AccordionItem value="item-4">
+    <AccordionTrigger>Sync transactions with bank?</AccordionTrigger>
+    <AccordionContent>
+        Nope, this is not a feature at this time. I'm considering adding it in the future, when the user base grows enough to cover integration costs.
+
+        But you can import transactions from your bank. You can import QFX, QBO, OFX, and CSV files. You can also import transactions from other apps, such as Mint, YNAB, and others.
+
+        This is a manual process at this moment, but it'll be automated in the future.
+
+        To request import, just send me an
+        <a href="mailto:dmitrii@malakhov?subject=Budget%20Vision%20Data Import" className="underline text-blue-500 hover:text-blue-700" target="_blank" rel="noopener noreferrer">email</a>
+        with the file attached, and I'll import it for you.
+    </AccordionContent>
+    </AccordionItem>
+
+</Accordion>
+
+## Contact
+
+If you have other questions, please write me an [email](mailto:dmitrii@malakhov?subject=Budget%20Vision%20Question).
